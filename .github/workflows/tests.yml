@@ -15,6 +15,11 @@ jobs:
         git submodule init
         git submodule update
 
+        # update data
+        cd pagila/
+        git checkout master
+        cd ..
+
         # run the database in docker container
         docker-compose up -d --build
 
